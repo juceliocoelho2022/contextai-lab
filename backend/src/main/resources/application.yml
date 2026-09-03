@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: contextai-lab
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

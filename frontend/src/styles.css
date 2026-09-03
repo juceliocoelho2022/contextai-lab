@@ -1,0 +1,139 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(99, 102, 241, .20), transparent 35%),
+    #0b1020;
+}
+
+button, textarea { font: inherit; }
+
+.page {
+  width: min(1050px, 92%);
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.hero { margin-bottom: 32px; }
+
+.badge {
+  display: inline-block;
+  padding: 7px 11px;
+  border: 1px solid #475569;
+  border-radius: 999px;
+  font-size: .75rem;
+  letter-spacing: .08em;
+}
+
+h1 {
+  margin: 18px 0 8px;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: .95;
+}
+
+.hero p {
+  max-width: 700px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.card, .roadmap {
+  background: rgba(15, 23, 42, .88);
+  border: 1px solid #1e293b;
+  border-radius: 22px;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 20px 70px rgba(0,0,0,.2);
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #f8fafc;
+  padding: 16px;
+  outline: none;
+}
+
+textarea:focus { border-color: #818cf8; }
+
+button {
+  margin-top: 14px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .6; cursor: not-allowed; }
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.token {
+  min-width: 105px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #111827;
+  border: 1px solid #334155;
+}
+
+.token span {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.token small { color: #94a3b8; }
+
+.note, .error { margin-bottom: 0; color: #94a3b8; }
+.error { color: #fecaca; }
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.steps span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: #111827;
+  border: 1px solid #334155;
+  color: #94a3b8;
+}
+
+.steps .done {
+  color: #dcfce7;
+  border-color: #166534;
+  background: #052e16;
+}

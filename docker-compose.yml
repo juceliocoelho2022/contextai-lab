@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: ./backend
+    container_name: contextai-backend
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    container_name: contextai-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: contextai-postgres
+    environment:
+      POSTGRES_DB: contextai
+      POSTGRES_USER: contextai
+      POSTGRES_PASSWORD: contextai
+    ports:
+      - "5432:5432"
+    volumes:
+      - contextai_pgdata:/var/lib/postgresql/data
+
+volumes:
+  contextai_pgdata:
